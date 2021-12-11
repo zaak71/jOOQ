@@ -1219,6 +1219,7 @@ public final class Convert {
                  : string;
         }
 
+        // CS 427 issue link: github.com/jOOQ/jOOQ/issues/12547
         private static String patchIso8601Timestamp(String string, boolean t) {
             if (t) {
                 if (string.contains("T")) {

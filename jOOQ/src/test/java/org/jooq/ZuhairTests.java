@@ -13,6 +13,7 @@ import java.sql.Timestamp;
 
 public class ZuhairTests {
 
+    // CS 427 issue link: github.com/jOOQ/jOOQ/issues/12547
     @Test
     public void testYearDateConversion() throws ClassNotFoundException {
         LocalDateTime res = (LocalDateTime) Convert.convert("2007-12-03T10:15:30",  Class.forName("java.time.LocalDateTime"));
@@ -20,6 +21,7 @@ public class ZuhairTests {
         Assert.assertEquals(expected, res);
     }
 
+    // CS 427 issue link: github.com/jOOQ/jOOQ/issues/12547
     @Test
     public void test3DigitYearDateConversion() throws ClassNotFoundException {
         LocalDateTime res = (LocalDateTime) Convert.convert("0201-12-03T10:15:30", Class.forName("java.time.LocalDateTime"));
@@ -27,12 +29,14 @@ public class ZuhairTests {
         Assert.assertEquals(expected, res);
     }
 
+    // CS 427 issue link: github.com/jOOQ/jOOQ/issues/12547
     @Test
     public void testInvalidDateConversion() throws ClassNotFoundException {
         LocalDateTime res = (LocalDateTime) Convert.convert("0202-03T10:15:30", Class.forName("java.time.LocalDateTime"));
         Assert.assertNull(res);
     }
 
+    // CS 427 issue link: github.com/jOOQ/jOOQ/issues/12547
     @Test
     public void testTimestampConversion() throws ClassNotFoundException {
         Timestamp res = (Timestamp) Convert.convert("2007-12-03T10:15:30",  Class.forName("java.sql.Timestamp"));
@@ -41,6 +45,7 @@ public class ZuhairTests {
         Assert.assertEquals(expected, res);
     }
 
+    // CS 427 issue link: github.com/jOOQ/jOOQ/issues/12553
     @Test
     public void testParseBackslashEscapingValueOf() {
         Assert.assertEquals("DEFAULT", ParseBackslashEscaping.DEFAULT.value());
@@ -48,6 +53,7 @@ public class ZuhairTests {
         Assert.assertEquals("OFF", ParseBackslashEscaping.OFF.value());
     }
 
+    // CS 427 issue link: github.com/jOOQ/jOOQ/issues/12553
     @Test
     public void testParseBackslashEscapingFromValue() {
         Assert.assertEquals(ParseBackslashEscaping.fromValue("DEFAULT"), ParseBackslashEscaping.DEFAULT);

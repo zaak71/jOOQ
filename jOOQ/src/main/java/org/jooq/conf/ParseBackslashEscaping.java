@@ -28,6 +28,7 @@ public enum ParseBackslashEscaping {
     ON,
     OFF;
 
+    // CS 427 issue link: github.com/jOOQ/jOOQ/issues/12553
     /**
      * Get the string name of the enum value.
      * @return - string representation of the enum value
@@ -36,6 +37,7 @@ public enum ParseBackslashEscaping {
         return name();
     }
 
+    // CS 427 issue link: github.com/jOOQ/jOOQ/issues/12553
     /**
      * Return the enum value from the string name.
      * @param value - the string name of the enum value.
